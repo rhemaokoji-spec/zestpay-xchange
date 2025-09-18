@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZestPay Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgb(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #b98a07;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form action="/register" method="POST" onsubmit="return validateForm()">
+      <input type="text" name="name" placeholder="Full Name" required>
+      
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <p class="error" id="phoneError">Phone number must be at least 11 digits</p>
+
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Rather Not To Say</option>
+      </select>
+
+      <input type="password" name="password" placeholder="Password" id="password" required>
+      <p class="error" id="passError">Password must be at least 6 characters</p>
+
+      <input type="password" placeholder="Confirm Password" id="confirm" required>
+      <p class="error" id="matchError">Passwords do not match</p>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      const phone = document.querySelector('input[name="phone"]').value;
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+
+      let valid = true;
+
+      // Phone number validation
+      if (phone.length < 11) {
+        document.getElementById("phoneError").style.display = "block";
+        valid = false;
+      } else {
+        document.getElementById("phoneError").style.display = "none";
+      }
+
+      // Password length
+      if (password.length < 6) {
+        document.getElementById("passError").style.display = "block";
+        valid = false;
+      } else {
+        document.getElementById("passError").style.display = "none";
+      }
+
+      // Password match
+      if (password !== confirm) {
+        document.getElementById("matchError").style.display = "block";
+        valid = false;
+      } else {
+        document.getElementById("matchError").style.display = "none";
+      }
+
+      return valid;
+    }
+  </script>
+</body>
+</html>

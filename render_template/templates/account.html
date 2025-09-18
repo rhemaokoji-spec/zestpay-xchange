@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Account - ZestPay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #25D366;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      }
+
+    .edit-btn {
+      margin-top: -10px;
+      margin-bottom: 20px;
+      float: right;
+      font-size: 14px;
+      cursor: pointer;
+      color: #007bff;
+      background: none;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Manage Account</h2>
+
+    <div class="section-title">
+      Profile Info
+      <button class="edit-btn" onclick="toggleEdit(true)">Edit</button>
+    </div>
+
+    <form id="profileForm">
+      <label>Full Name</label>
+      <input type="text" name="name" value="John Doe" disabled>
+
+      <label>Gender</label>
+      <input type="text" name="gender" value="Male" disabled>
+
+      <label>Email</label>
+      <input type="email" name="email" value="johndoe@example.com" disabled>
+
+      <label>Phone</label>
+      <input type="tel" name="phone" value="+2348012345678" disabled>
+
+      <button type="submit" id="saveBtn" style="display:none;">Save Changes</button>
+    </form>
+
+    <div class="section-title">Change Password</div>
+
+    <form id="passwordForm">
+      <label>Current Password</label>
+      <input type="password" required>
+
+      <label>New Password</label>
+      <input type="password" required>
+
+      <label>Confirm New Password</label>
+      <input type="password" required>
+      <button type="submit">Update Password</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleEdit(enable) {
+      const inputs = document.querySelectorAll('#profileForm input');
+      const saveBtn = document.getElementById('saveBtn');
+      inputs.forEach(input => input.disabled = !enable);
+      saveBtn.style.display = enable ? 'block' : 'none';
+    }
+
+    // Optional: Save logic (no real backend here)
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Profile updated successfully!');
+      toggleEdit(false);
+    });
+
+    document.getElementById('passwordForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Password changed successfully!');
+    });
+  </script>
+
+</body>
+</html>

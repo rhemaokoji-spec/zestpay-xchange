@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZestPay Support & Help</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Background with transparent overlay */
+    .support-bg {
+      background: url('https://media.giphy.com/media/3oEdv5PaHKqMg9D1Li/giphy.gif') no-repeat center center/cover;
+      height: 100%;
+      position: relative;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6); /* transparent black */
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .help-box {
+      max-width: 500px;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+    .help-box h1 {
+      margin-bottom: 20px;
+    }
+
+    .help-box p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .faq-btn {
+      margin-top: 20px;
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="support-bg">
+    <div class="overlay">
+      <div class="help-box">
+        <h1>Need Help?</h1>
+        <p>We're here for you 24/7. If you have issues with The Website, or account login, reach out to our support team via the contact options below.</p>
+        <button class="faq-btn" onclick="showContact()">Contact Support</button>
+        <p id="contactInfo" style="margin-top: 20px; display: none;">
+          Email: <a href="https://zestpayexchange@gmail.com" style="color: #00e6e6;">support@zestpay.io</a><br>
+          WhatsApp: <a href="https://wa.me/2348026544598" target="_blank" style="color: #00e6e6;">Chat Now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContact() {
+      document.getElementById("contactInfo").style.display = "block";
+    }
+  </script>
+</body>
+</html>

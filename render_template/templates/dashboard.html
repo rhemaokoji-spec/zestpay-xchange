@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>zp</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <nav>
+      <div class="logo">
+        <p>ZestPay</p>
+      </div>
+  
+
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active" tabindex="0">Home</a>
+        <a href="market.html" tabindex="0">Market</a>
+        <a href="news.html" tabindex="0">crypto News</a>
+        <a href="#services" tabindex="0">Our Mission</a>
+        <a href="community.html" tabindex="0">Community</a>
+        <a href="support.html" tabindex="0">Support/Help Center</a>
+        <a href="account.html" tabindex="0">Manage Account</a>
+        <a href="#" onclick="confirmLogout()" class="logout-btn">Logout</a>
+      </div>
+      <div id="logoutModal" style="display: none;">
+  <div class="modal-content">
+    <p>Are you sure you want to logout?</p>
+    <button onclick="doLogout()">Yes</button>
+    <button onclick="closeModal()">No</button>
+  </div>
+</div>
+
+<!-- Loading Animation -->
+<div id="loadingScreen" style="display: none;">
+  <div class="loader"></div>
+  <p>Logging out...</p>
+</div>
+      <div class="nav-controls">
+        <!-- Theme toggle with sun/moon SVG -->
+        
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+          </svg>
+        </button>
+        
+        <!-- Hamburger menu -->
+        <button id="hamburger" aria-label="Toggle menu" class="hamburger" aria-expanded="false" tabindex="0">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path class="line top" d="M3 7h18" />
+            <path class="line middle" d="M3 12h18" />
+            <path class="line bottom" d="M3 17h18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section id="home" class="section hero-section fade-in">
+    <div class="hero-content">
+      <h1>Welcome to ZestPay</h1>
+      <p>Redefining The Future Of Money.</p>
+      <a href="#support" class="cta-button">Support</a>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="section fade-in">
+    <h2>Our Mission</h2>
+    <div class="features">
+      <div class="feature">
+        <h3></h3>
+        <p>At Zest Pay, our mission is to redefine the future of money by creating a secure, accessible, and innovative digital financial ecosystem that empowers individuals and businesses across the globe. We are driven by the belief that financial freedom and inclusion should not be a privilege, but a basic right accessible to everyone — regardless of geography, background, or economic status.
+
+</p>
+      </div>
+      <div class="feature">
+        <h3>We Focus On</h3>
+        <p>
+  Financial Inclusion  
+  We aim to provide access to modern financial tools for everyone, regardless of location, background, or income level.
+
+  Crypto Simplicity  
+  Zest Pay is built to be user-friendly so that anyone — beginner or expert — can easily navigate and benefit from digital finance.
+
+  Security First  
+  Your data and assets are protected with top-tier encryption, authentication systems, and constant monitoring.
+
+  Real-Time Transactions  
+  Experience lightning-fast transfers, payments, and conversions without unnecessary delays or fees.
+
+  Education & Awareness  
+  We believe in empowering users through knowledge. Our platform includes learning resources to help you grow financially.
+
+  Community Driven  
+  Our users are not just customers — they’re part of a growing movement to redefine what money can be.
+
+  Innovation  
+  We constantly update Zest Pay with the latest blockchain and financial technology to keep you ahead of the game.
+</p>
+      </div>
+      <div class="feature">
+        <h3>Why Work Us</h3>
+        <p>Craft campaigns that educate and attract new users, building ZestPay’s presence across Africa.
+Community Manager  
+Grow and engage our crypto community, creating events and communication channels for user support and feedback.
+
+<li>Remote friendly culture</li> 
+<li> startup environment</li>
+<li>Opportunities for leadership and personal growth</li>
+<li>Competitive salary and crypto-based incentives</li>  
+<li>Work with passionate innovators and blockchain experts</li>  
+<li>Access to the latest tools, resources, and training </li>
+<li>A mission-driven team that values creativity, trust, and community</li> 
+
+Ready to Build the Future with Us?
+</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Careers Section -->
+  <section id="careers" class="section fade-in">
+    <h2>Careers at ZestPay</h2>
+    <p>
+
+Join the Future of Digital Finance
+
+At ZestPay, we're building more than just a crypto platform — we're building a movement. A movement that empowers people across the world to take control of their finances through innovation, security, and accessibility.
+
+We’re looking for passionate, driven, and curious individuals who want to shape the future of crypto and blockchain in Africa and beyond.
+
+</p>
+    <p>We’re currently hiring for:</p>
+    <ul>
+      <li>Blockchain Engineer</li>
+      <li>Content Writer/Crypto Educator</li>
+      <li>Community Manager</li>
+      <li>Marketing Specialist</li>
+    </ul>
+    <p><a href="#contact">Apply Now →</a></p>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact Us</h2>
+    <p>
+
+We’d love to hear from you! Whether you have questions about our services, want to give feedback, or just want to say hello, feel free to reach out. Our dedicated support team is here to assist you promptly and professionally.
+
+If you're interested in joining the ZestPay team, please send your application to careers@zestpay.com or fill out the form below with your details and message.
+
+Please fill out the form below, and we’ll get back to you as soon as possible.
+
+
+</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  
+  <!-- ARIA live region for announcements -->
+  <div id="aria-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  
+  <script src="script.js"></script>
+ <style>
+  
+:root {
+  --bg-color: #0d1117;
+  --navbar-bg: #161b22;
+  --text-color: #c9d1d9;
+  --accent-color: #58a6ff;
+  --navbar-height: 64px;
+  --font-family: 'Segoe UI', Roboto, monospace, sans-serif;
+  --transition-speed: 0.3s;
+  --max-content-width: 1200px;
+  --border-radius: 6px;
+  --input-bg: #21262d;
+  --input-border: #30363d;
+  --input-focus-border: var(--accent-color);
+  --button-bg: var(--accent-color);
+  --button-hover-bg: #3b7dd8;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --navbar-bg: #f5f5f5;
+  --text-color: #333333;
+  --accent-color: #007BFF;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --input-focus-border: var(--accent-color);
+  --button-bg: var(--accent-color);
+  --button-hover-bg: #0056b3;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+ Navbar 
+.navbar {
+  background-color: var(--navbar-bg);
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: auto;
+  padding: 0 24px;
+}
+
+.logo p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+ Nav links 
+.nav-links {
+  display: flex;
+  gap: 512px;
+  margin: 10px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color var(--transition-speed) ease;
+  outline-offset: 3px;
+  padding: 4px 0;
+  margin: 12px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: var(--accent-color);
+  transition: width var(--transition-speed) ease;
+  border-radius: 2px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+ Nav controls 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-speed) ease;
+  outline-offset: 3px;
+  user-select: none;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+Hamburger 
+.hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  color: var(--text-color);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-speed) ease;
+  outline-offset: 3px;
+}
+
+.hamburger .icon {
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.line {
+  stroke: currentColor;
+  stroke-width: 2.5;
+  transition: all var(--transition-speed) ease;
+  transform-origin: center;
+}
+
+.hamburger.active .line.top {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.active .line.middle {
+  opacity: 0;
+}
+
+.hamburger.active .line.bottom {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--navbar-bg);
+    width: 100%;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .nav-links.show {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .nav-links a {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+}
+
+ Section layout
+.section {
+  max-width: var(--max-content-width);
+  margin: auto;
+  padding: 80px 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-bottom: 1px solid #2c313a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: var(--navbar-height);
+}
+
+ Fade-in animation 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ Hero section 
+.hero-section {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.cta-button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(88, 166, 255, 0.4);
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background-color: var(--button-hover-bg);
+  outline: none;
+  box-shadow: 0 6px 12px rgba(88, 166, 255, 0.6);
+}
+
+ Services 
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature {
+  background-color: var(--navbar-bg);
+  padding: 28px 32px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  flex: 1 1 300px;
+  min-width: 280px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  line-height: 1.9;
+  text-overflow: ellipsis;
+  gap: 10px;
+  font-family: cursive;
+  text-align: justify;
+  color: green;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--accent-color);
+  color:lightblue
+}
+
+.feature h3 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  color: rgb(6, 83, 6);
+}
+
+.feature p {
+  font-size: 1rem;
+  color: var(--text-color);
+  color: lightblue;
+}
+
+Careers 
+#careers p {
+  max-width: 700px;
+  margin: 0 auto 16px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: red;
+}
+
+#careers ul {
+  max-width: 400px;
+  margin: 0 auto 24px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  list-style-type: disc;
+}
+
+#careers li {
+  margin-bottom: 8px;
+  color:green;
+}
+
+#careers a {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#careers a:hover {
+  color: var(--button-hover-bg);
+}
+
+ Contact 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--input-bg);
+  border: 1.8px solid var(--input-border);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  padding: 12px 76px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color var(--transition-speed) ease;
+  margin: 15px;
+  display: block;
+  text-align: left;
+  justify-items: left;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+.contact-form button {
+  background-color:var(--input-bg);
+  color: white;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  box-shadow: 0 4px 8px rgba(6, 104, 2, 0.4);
+  display: block;
+  margin: 10px;
+ position: relative;
+  left: 110px;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 6px 12px rgba(3, 105, 25, 0.562);
+  color: black;
+  background-color: green;
+}
+
+ ARIA Live 
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+
+}
+</style>
+
+
+
+<style>
+  /* Modal Styles */
+  #logoutModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .modal-content {
+    background: rgb(59, 38, 6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Loading Animation */
+  #loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 26, 26, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-size: 18px;
+    color:white;
+  }
+  .loader {
+    border: 6px solid #12160b;
+    border-top: 6px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  function confirmLogout() {
+    document.getElementById('logoutModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('logoutModal').style.display = 'none';
+  }
+
+  function doLogout() {
+    document.getElementById('logoutModal').style.display = 'none';
+    document.getElementById('loadingScreen').style.display = 'flex';
+
+    setTimeout(() => {
+      // Optional: Clear user storage
+      localStorage.clear();
+      sessionStorage.clear();
+
+      // Redirect to home page
+      window.location.href = "home.html"; // change to your homepage file
+    }, 9000); // 9 seconds delay
+  }  
+</script>
+
+</body>
+</html>
